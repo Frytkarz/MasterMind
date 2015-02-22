@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="oth.mastermind" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Play"
+            android:label="@string/title_activity_play"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="oth.mastermind.MainMenu" />
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="oth.mastermind.MainMenu" />
+        </activity>
+        <activity
+            android:name=".Best"
+            android:label="@string/title_activity_best"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="oth.mastermind.MainMenu" />
+        </activity>
+        <activity
+            android:name=".SaveBest"
+            android:label="@string/title_activity_save_best"
+            android:parentActivityName=".Play" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="oth.mastermind.Play" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="oth.mastermind.Settings"
+    android:background="#ffbf7e5b"
+    android:id="@+id/lytSettings"
+    android:focusable="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:textColor="#ff0400ff"
+        android:phoneNumber="true"
+        android:paddingTop="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Counting results using:"
+            android:id="@+id/txtCounting"
+            android:layout_gravity="center_horizontal|left"
+            android:textColor="#ff000000"
+            android:textSize="20dp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdGrpCounting">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="only number of steps"
+                android:id="@+id/rdBtnOnly"
+                android:checked="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="time and number of steps"
+                android:id="@+id/rdBtnTime"
+                android:checked="false" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer mode:"
+            android:id="@+id/txtAnswer"
+            android:textColor="#ff000000"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdGrpAnswer">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="easy - answer place is common"
+                android:id="@+id/rdBtnEasy"
+                android:checked="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hard - answer place is random"
+                android:id="@+id/rdBtnHard"
+                android:checked="false" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Colors repeating:"
+            android:id="@+id/txtOne"
+            android:textColor="#ff000000"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdGrpColors" >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="specific color can be used only one time"
+                android:id="@+id/rdBtnOne"
+                android:checked="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="specific color can be used many times"
+                android:id="@+id/rdBtnMany"
+                android:checked="false" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of saved best results:"
+            android:id="@+id/txtNumber"
+            android:textColor="#ff000000"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:ems="10"
+                android:id="@+id/eTxtNumber"
+                android:textSize="20dp" />
+
+            <Button
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Save Settings"
+                android:id="@+id/btnSave"
+                android:layout_gravity="right"
+                android:background="@drawable/button_menu"
+                android:textColor="#ff08007e"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
